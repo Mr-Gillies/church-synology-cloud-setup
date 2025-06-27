@@ -1,0 +1,16 @@
+# System-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+
+# Node modules (future-proofing)
+node_modules/
+
+# Python cache (if used later)
+__pycache__/
