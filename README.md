@@ -1,33 +1,72 @@
 # Church Synology Cloud Setup
 
-This repository documents the deployment of a local, Synology-based cloud solution for internal file sharing and media storage at The Bridge Church.
+This project documents the setup and deployment of a Synology NAS system at The Bridge Church. The goal was to move away from relying on external hard drives and cloud platforms by setting up a secure, centralized storage solution that volunteers and staff can access internally.
 
-> **Note:** Setup is currently in progress. This repository will be updated as the NAS is configured and deployed.
+Everything was planned with the future in mind — this setup keeps things clean, simple, and scalable for whoever takes over next.
 
-## Project Purpose
+---
 
-- Centralize access to internal church documents and media
-- Provide file sharing access to volunteers and staff
-- Operate independently from third-party cloud services
-- Be minimally invasive to the existing church IT infrastructure
+## Why This Was Built
 
-## Repository Structure
+- To organize and centralize the church's worship-related media
+- To transfer content from an aging LaCie external drive into a reliable system
+- To create a local cloud setup that integrates well with our network
+- To set things up in a way that doesn’t interfere with existing IT systems
 
-```
+---
+
+## System Overview
+
+| Component             | Details                              |
+|----------------------|--------------------------------------|
+| NAS Model            | Synology DS723+                      |
+| Drives               | 2× 8TB Seagate IronWolf (RAID 1)     |
+| Total Usable Storage | ~7.2 TB                              |
+| File System          | Btrfs                                |
+| Main Shared Folder   | `Lacie_2025_06`                      |
+| Remote Access        | QuickConnect configured              |
+| Deployment Status    | Staged and ready for LAN integration |
+
+---
+
+## Project Folder Structure
+
 church-synology-cloud-setup/
 ├── README.md
+├── .gitignore
 ├── docs/
-│   ├── setup.md
-│   └── images/
-```
+│ ├── setup.md
+│ ├── IT-deployment-overview.md
+│ └── images/
+│ ├── raid-setup.png
+│ ├── filesystem-selection.png
+│ ├── shared-folder-created.png
+│ ├── physical-lacie-drive.jpeg
+│ ├── data-transfer-progress.jpeg
+│ └── final-connected-photo.jpg
 
-## Status
+---
 
-- Project planning complete
-- Documentation initialized
-- NAS configuration in progress
-- Deployment to church LAN upcoming
+## What’s Inside
 
-## License
+- `setup.md`: Full walkthrough of how the NAS was configured
+- `IT-deployment-overview.md`: Clean, high-level summary for future handoff
+- `images/`: Screenshots from the setup process and physical install
 
-This repository is provided for documentation, transparency, and portfolio use.
+---
+
+## What’s Done So Far
+
+- [x] NAS set up and tested on home network
+- [x] RAID 1 configured for drive redundancy
+- [x] Folder created and permissions applied
+- [x] 1.6 TB transferred from LaCie drive
+- [x] Remote access enabled
+- [ ] Final handoff and LAN setup by IT team
+
+---
+
+## Notes
+
+Everything here was built with care and intention to support the church moving forward. This repo does not contain passwords or internal credentials — only public documentation and visuals related to the project setup.
+
