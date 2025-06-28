@@ -1,72 +1,84 @@
-# Synology Cloud Setup – The Bridge Church
+# Synology NAS Setup – The Bridge Church
 
-This document outlines the setup of a self-hosted cloud system using a Synology DS723+ NAS. The solution is designed for internal media storage, volunteer access, and document management at The Bridge Church.
+This guide outlines the technical setup process for the Synology DS723+ NAS deployed at The Bridge Church. It includes storage initialization, shared folder creation, and data transfer procedures from a legacy LaCie drive.
 
----
 
-## 1. Hardware Overview
+1. Initial Configuration
 
-- NAS Model: Synology DS723+
-- Internal Drives: Seagate IronWolf 3.5" NAS Drive (x1)
-- Capacity: 8 TB total storage
-- Serial Number: [omitted for privacy]
-- Network: Connected via Ethernet to router
-- Setup Environment: Configured on home network before deployment to church LAN
+NAS Access
+- Navigated to [find.synology.com](https://find.synology.com) to locate the NAS on the local network
+- Logged in using the administrator account: `setup-admin`
+- Performed initial DSM setup on version 7.2
 
----
+System Settings
+- Set device name: `TheBridgeNAS`
+- Configured admin user credentials
+- Skipped enabling Synology Assistant visibility during setup (later confirmed enabled by default)
 
-## 2. Initial NAS Setup
 
-- Accessed DSM via find.synology.com
-- Logged in to the DiskStation Manager (DSM) web interface
-- Initialized storage pool and volume
+2. Drive and RAID Setup
 
----
+Drive Information
+- Installed 2× Seagate IronWolf 8TB NAS drives
+- Selected **RAID 1** (mirrored setup) to ensure redundancy
 
-## 3. Shared Folder Configuration
+Volume Creation
+- Created a single volume (~7.2 TB usable)
+- File system: **Btrfs** (for snapshot support and data integrity checks)
+- Volume description: Local media cloud for multitracks, loops, and Ableton files
 
-- Created shared folder: `ChurchCloud`
-- Set folder permissions for project admin account
-- Folder designated for cloud-accessible files and media
+Screenshot Reference:
+![RAID Setup](images/raid-setup.png)  
+![Filesystem Selection](images/filesystem-selection.png)
 
----
 
-## 4. Synology Drive Setup
+3. Shared Folder Setup
 
-- Installed Synology Drive Server from Package Center
-- Waited through initialization countdown
+- Created shared folder: `Lacie_2025_06`
+- Enabled Recycle Bin
+- Enabled file integrity protection
+- Assigned `read/write` permissions to `setup-admin`
+- `guest` account: No access
 
-![Drive Initialization Countdown](images/Countdown.png)
+Screenshot Reference:
+![Shared Folder Created](images/shared-folder-created.png)
 
-- Enabled the `ChurchCloud` folder as a Team Folder in Synology Drive Admin Console
 
----
+4. Synology Drive Server
 
-## 5. Access from Local Machines
+- Installed **Synology Drive Server** via Package Center
+- Enabled the `Lacie_2025_06` folder as a Team Folder
+- QuickConnect was preconfigured for external access (`bridgecloudnas`)
 
-### Windows
-- File Explorer > Map Network Drive
-- Path: `\\[NAS-IP]\ChurchCloud`
 
-### macOS
-- Finder > Go > Connect to Server
-- Path: `smb://[NAS-IP]/ChurchCloud`
+5. Data Migration
 
----
+- Source: Legacy external LaCie drive
+- Total migrated: ~1.6 TB
+- Transfer performed via macOS Finder directly to NAS over LAN
+- Folder structure preserved
 
-## 6. Deployment Considerations
+Screenshot Reference:
+![Physical LaCie Drive](images/physical-lacie-drive.jpeg)  
+![Data Transfer Progress](images/data-transfer-progress.jpeg)
 
-- The NAS was initially configured on a home network
-- Will be moved to the church’s internal LAN for production use
-- IP address will change, so shared folder mappings will need to be updated
-- System configuration and data will persist
 
----
+6. Deployment Status
 
-## 7. Optional: Remote Access
+- Device prepared and tested on a home network
+- Ready for LAN integration at the church
+- Admin handoff pending for static IP setup, backups, and user provisioning
 
-- Enabled QuickConnect via Control Panel > External Access
-- Provides remote access via Synology Drive apps and browser
+Final Configuration View:
+![Deployment Complete](images/final-connected-photo.jpg)
+
+
+Notes
+
+- No passwords, emails, or credentials are included in this file.
+- All setup decisions were made to ensure flexibility and handoff readiness.
+
+
 
 
 
