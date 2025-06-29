@@ -28,8 +28,8 @@ Volume Creation
 - Volume description: Local media cloud for multitracks, loops, and Ableton files
 
 Screenshot Reference:
-![RAID Setup](images/raid-setup.png)  
-![Filesystem Selection](images/filesystem-selection.png)
+![RAID Setup](Config 3.png)  
+![Filesystem Selection](images/Config 4.png)
 
 
 3. Shared Folder Setup
@@ -54,13 +54,13 @@ Screenshot Reference:
 5. Data Migration
 
 - Source: Legacy external LaCie drive
-- Total migrated: ~1.6 TB
+- Total migrated: ~575.68 GB
 - Transfer performed via macOS Finder directly to NAS over LAN
 - Folder structure preserved
 
 Screenshot Reference:
-![Physical LaCie Drive](images/physical-lacie-drive.jpeg)  
-![Data Transfer Progress](images/data-transfer-progress.jpeg)
+![Physical LaCie Drive](images/physical-lacie-drive.png)  
+![Data Transfer Progress](images/data-transfer-progress.png)
 
 
 6. Deployment Status
@@ -70,13 +70,19 @@ Screenshot Reference:
 - Admin handoff pending for static IP setup, backups, and user provisioning
 
 Final Configuration View:
-![Deployment Complete](images/final-connected-photo.jpg)
+![Deployment Complete](images/bridge-nas-installed-unplugged.jpg)
 
 
-Notes
+---
 
-- No passwords, emails, or credentials are included in this file.
-- All setup decisions were made to ensure flexibility and handoff readiness.
+Final Notes
+
+- The unit is **staged, tested, and fully populated** with worship media files.
+- Networking setup, VLAN mapping, and IP assignments are deferred to IT.
+- Future `.als` and multitrack optimizations will be led by Ryan Gillies and Art Fuller.
+
+Please refer to `IT-deployment-overview.md` for credential handling and support contact.
+
 
 
 

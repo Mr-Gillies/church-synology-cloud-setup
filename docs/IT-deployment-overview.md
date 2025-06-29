@@ -1,53 +1,67 @@
 # Synology NAS Deployment Overview – The Bridge Church
 
-This document outlines the deployment process and technical configuration for a self-hosted Synology NAS system used by The Bridge Church. This local cloud solution provides centralized access to multitrack files, Ableton sessions, media archives, and general documentation.
+This document outlines the deployment and configuration of a self-hosted Synology NAS system implemented for The Bridge Church. The solution provides centralized LAN-accessible storage for multitracks, Ableton sessions, worship media, and internal documentation.
+
+---
 
 
 1. Project Goals
 
-- Enable internal access to critical worship and media assets
-- Replace reliance on third-party cloud services
-- Provide local, LAN-accessible storage for staff and volunteers
-- Allow future growth and administrative flexibility via Synology DSM
+- Provide internal access to critical worship and media assets
+- Replace reliance on third-party cloud solutions
+- Support staff and volunteer workflows through centralized, reliable storage
+- Allow future administrative flexibility using Synology DSM
 
 
 2. Hardware & Configuration
 
 - **NAS Model:** Synology DS723+
-- **Drives:** 2x Seagate IronWolf NAS 8TB (RAID 1)
+- **Drives:** 2× Seagate IronWolf NAS 8TB
 - **RAID Type:** RAID 1 (mirrored for redundancy)
-- **Volume:** ~7.4 TB allocated for media
-- **File System:** Btrfs for advanced snapshot and data protection features
+- **Volume Size:** ~7.2 TB usable
+- **File System:** Btrfs (for snapshots, integrity protection, and advanced file control)
 
 
-3. Shared Folders
+3. Shared Folder Structure
 
 - **Primary Folder:** `Lacie_2025_06`
-  - **Purpose:** Archive of audio projects, multitrack exports, and loops
+  - **Contents:** Audio projects, multitrack exports, loops, and archived Ableton sessions
   - **Recycle Bin:** Enabled
-  - **Permissions:** Managed via DSM
+  - **Permissions:** Controlled via DSM admin interface
 
 
 4. Access Options
 
-- **Local Access:** Mapped as network share on Windows/macOS
-- **Remote Access:** QuickConnect configured
-- **DSM Access:** Browser login interface for administrators
+- **Local Network Access:** Mappable as a shared drive on Windows/macOS
+- **Remote Access:** Configured via Synology QuickConnect (internal access ID available on request)
+- **DSM Access:** Synology Drive and DSM interface are enabled, but access details are managed internally
 
 
-5. Deployment Notes
 
-- The NAS has been initialized and tested on a home network
-- Ready to be connected to the church’s LAN via Ethernet
-- Data transfer (1.6 TB) from legacy drive has been completed
-- Admin accounts and folders are structured but flexible
+5. Deployment Status
+
+- ✅ NAS initialized, staged, and tested on secure home network
+- ✅ RAID 1 configured and verified
+- ✅ 575.68 GB of media transferred from legacy LaCie external drive
+- ✅ Placed in church’s existing equipment rack
+- ⬜ Network cable left unplugged to avoid interrupting existing VLAN, Dante, or LAN systems
+- ⬜ Final network integration, VLAN mapping, and IP reservation to be completed by IT professional
+
 
 6. Visual References
 
-Screenshots of the setup process and data migration are included in the `docs/images/` folder of this repository to provide reference for future maintenance or auditing.
+Setup screenshots and photos of hardware placement are located in:
 
 
-Maintained By
+Refer to these files for visual verification of each configuration step and the physical rack install.
 
-This setup was prepared with future scalability and IT oversight in mind. Handoff to the church's IT lead is advised for final integration, access control, and backup policy.
+---
+
+## Maintainer Notes
+
+This deployment was structured to be non-intrusive and safe for integration into an existing production network. All security, firewall, and access policies are to be finalized by the church’s IT lead.
+
+> Maintained by: **Ryan Gillies**
+
+For future multitrack and Ableton `.als` session refinement, coordination will be handled by **Art Fuller** and **Ryan Gillies**.
 
