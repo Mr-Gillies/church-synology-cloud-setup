@@ -75,7 +75,7 @@ church-synology-cloud-setup/
 - ✅ Legacy LaCie drive (1.6 TB) fully cloned to NAS  
 - ✅ NAS successfully placed in church server rack (not plugged in)  
 - ✅ Remote access enabled via QuickConnect (`bridgecloudnas`)  
-- ✅ Final photo added of NAS in rack with network cable unplugged  
+- ✅ Final photo added of NAS in rack with network cable unplugged (Notified our IT team through our communication software: Trello)
 - ⬜ Final IP setup, VLAN mapping, and secure access control to be handled by IT  
 
 
