@@ -44,7 +44,7 @@ This document outlines the deployment and configuration of a self-hosted Synolog
 - ✅ RAID 1 configured and verified
 - ✅ 575.68 GB of media transferred from legacy LaCie external drive
 - ✅ Placed in church’s existing equipment rack
-- ⬜ Network cable left unplugged to avoid interrupting existing VLAN, Dante, or LAN systems
+- ⬜ Network cable left unplugged to avoid interrupting existing VLAN, Dante, or LAN systems (Notified IT Team through our Trello board)
 - ⬜ Final network integration, VLAN mapping, and IP reservation to be completed by IT professional
 
 
