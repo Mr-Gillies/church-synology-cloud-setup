@@ -72,7 +72,7 @@ church-synology-cloud-setup/
   - Multitracks  
   - Planning Center Click Tracks  
   - Archived `.als` sessions for Ableton  
-- ✅ Legacy LaCie drive (1.6 TB) fully cloned to NAS  
+- ✅ Legacy LaCie drive (575.68 GB) fully cloned to NAS  
 - ✅ NAS successfully placed in church server rack (not plugged in)  
 - ✅ Remote access enabled via QuickConnect (`bridgecloudnas`)  
 - ✅ Final photo added of NAS in rack with network cable unplugged (Notified our IT team through our communication software: Trello)
