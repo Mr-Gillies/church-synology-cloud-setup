@@ -8,7 +8,7 @@ The goal was to implement a solution that bridges local and remote workflows whi
 ## Why This Was Built
 
 - To organize and centralize the church's worship-related media  
-- To transfer content from an aging 1.6TB LaCie external drive  
+- To transfer content from an aging 575.68 GB LaCie external drive  
 - To create a reliable and redundant local storage system  
 - To introduce internal cloud storage with optional mobile/web access  
 - To stage a system ready for secure handoff to IT for final networking and VLAN assignment  
